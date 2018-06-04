@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/foodbackground"
+    android:background="@drawable/backgroundHome"
     tools:context="com.quizzood2.etiennemaxime.quizzood2.Home">
 
     <FrameLayout
+        android:id="@+id/frame_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/frame_layout"
         android:animateLayoutChanges="true"></FrameLayout>
 
     <android.support.design.widget.BottomNavigationView
