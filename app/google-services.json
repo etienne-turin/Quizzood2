@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "29415961009",
+    "firebase_url": "https://myquiz-c43ad.firebaseio.com",
+    "project_id": "myquiz-c43ad",
+    "storage_bucket": "myquiz-c43ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29415961009:android:05a1cb3a15bbc1f1",
+        "android_client_info": {
+          "package_name": "com.example.nanoob.myquiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "29415961009-6lq55v9qffgikj3ij7pnhje4cvqkk1sn.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "29415961009-6lq55v9qffgikj3ij7pnhje4cvqkk1sn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByh5w7ubfiBXOIasXIh967iONdHGl_1Uc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
