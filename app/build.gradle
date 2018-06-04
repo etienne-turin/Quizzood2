@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "24.0.2"
     defaultConfig {
-        applicationId "dev.edmt.firebaseauthentication"
+        applicationId "com.quizzood2.etiennemaxime.quizzood2"
         minSdkVersion 19
         targetSdkVersion 25
         versionCode 1
