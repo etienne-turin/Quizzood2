@@ -33,4 +33,5 @@ public class CategoryFragment extends Fragment {
         myFragment = inflater.inflate(R.layout.fragment_category, container, false);
         return myFragment;
     }
+
 }
