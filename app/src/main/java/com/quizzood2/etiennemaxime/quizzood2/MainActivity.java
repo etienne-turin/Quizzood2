@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             }
                         }
                         else{
-                            startActivity(new Intent(MainActivity.this,DashBoard.class));
+                            startActivity(new Intent(MainActivity.this,Home.class));
                         }
                     }
                 });
