@@ -64,11 +64,11 @@ public class ForgotPassword extends AppCompatActivity implements View.OnClickLis
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful())
                         {
-                            Snackbar snackBar = Snackbar.make(activity_forgot,"We have sent password to email: "+email,Snackbar.LENGTH_SHORT);
+                            Snackbar snackBar = Snackbar.make(activity_forgot,"Un email est envoyé à: "+email,Snackbar.LENGTH_SHORT);
                             snackBar.show();
                         }
                         else{
-                            Snackbar snackBar = Snackbar.make(activity_forgot,"Failed to send password",Snackbar.LENGTH_SHORT);
+                            Snackbar snackBar = Snackbar.make(activity_forgot,"Echec de l'envoi du mot de passe",Snackbar.LENGTH_SHORT);
                             snackBar.show();
                         }
                     }

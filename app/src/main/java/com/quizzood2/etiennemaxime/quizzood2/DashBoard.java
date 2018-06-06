@@ -72,7 +72,7 @@ public class DashBoard extends AppCompatActivity implements View.OnClickListener
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful())
                 {
-                    Snackbar snackBar = Snackbar.make(activity_dashboard,"Password changed",Snackbar.LENGTH_SHORT);
+                    Snackbar snackBar = Snackbar.make(activity_dashboard,"Mot de passe modifié",Snackbar.LENGTH_SHORT);
                     snackBar.show();
                 }
             }
