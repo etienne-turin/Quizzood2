@@ -1,31 +1,39 @@
 {
   "project_info": {
-    "project_number": "578989257994",
-    "firebase_url": "https://quizz2-21d96.firebaseio.com",
-    "project_id": "quizz2-21d96",
-    "storage_bucket": "quizz2-21d96.appspot.com"
+    "project_number": "679250298595",
+    "firebase_url": "https://quizzood2-ecbe1.firebaseio.com",
+    "project_id": "quizzood2-ecbe1",
+    "storage_bucket": "quizzood2-ecbe1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:578989257994:android:b69d0cb2da0e6246",
+        "mobilesdk_app_id": "1:679250298595:android:b69d0cb2da0e6246",
         "android_client_info": {
           "package_name": "com.quizzood2.etiennemaxime.quizzood2"
         }
       },
       "oauth_client": [
         {
-          "client_id": "578989257994-1b0vb2heu9thunqsn937i6vi0b96ugk6.apps.googleusercontent.com",
+          "client_id": "679250298595-cup5oo5q1umq2h4u209lfbkg3k3bocoj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.quizzood2.etiennemaxime.quizzood2",
+            "certificate_hash": "459a790a8d718cb5b65919e92c811520be05dad6"
+          }
+        },
+        {
+          "client_id": "679250298595-7fq0rh7n1cnd615pe74a15ghcsjjv1vj.apps.googleusercontent.com",
           "client_type": 3
         },
         {
-          "client_id": "578989257994-1b0vb2heu9thunqsn937i6vi0b96ugk6.apps.googleusercontent.com",
+          "client_id": "679250298595-7fq0rh7n1cnd615pe74a15ghcsjjv1vj.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCJlCyJoZ-0tQ3T3ceHqLVHX44zMuiiq6w"
+          "current_key": "AIzaSyBlp_Z5IvcLzyZH9Vfld3BwQJO6VaoCyeM"
         }
       ],
       "services": {
@@ -33,8 +41,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "679250298595-7fq0rh7n1cnd615pe74a15ghcsjjv1vj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
