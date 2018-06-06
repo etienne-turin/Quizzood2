@@ -55,7 +55,7 @@
     <Button
         android:layout_below="@+id/login_input_password"
         android:id="@+id/login_btn_login"
-        android:text="Login"
+        android:text="Se connecter"
         android:background="#263238"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
@@ -67,7 +67,7 @@
         android:layout_centerHorizontal="true"
         android:clickable="true"
         android:textStyle="bold"
-        android:text="Forgot Password ?"
+        android:text="Mot de passe oublié?"
         android:textColor="@color/colorPrimaryDark"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
