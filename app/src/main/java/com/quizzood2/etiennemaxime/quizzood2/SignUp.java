@@ -30,7 +30,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-
+        setTitle("Inscription");
         //View
         btnSignup = (Button)findViewById(R.id.signup_btn_register);
         btnLogin = (TextView)findViewById(R.id.signup_btn_login);

@@ -28,6 +28,7 @@ public class ForgotPassword extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
+        setTitle("Mot de passe oublié?");
 
         //View
         input_email = (EditText)findViewById(R.id.forgot_email);
