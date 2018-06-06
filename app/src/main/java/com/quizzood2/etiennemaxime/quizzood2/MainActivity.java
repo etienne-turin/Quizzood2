@@ -46,9 +46,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //Init Firebase Auth
         auth = FirebaseAuth.getInstance();
 
-        //Check already session , if ok-> DashBoard
+        //Check already session , if ok-> Home
         if(auth.getCurrentUser() != null)
-            startActivity(new Intent(MainActivity.this,DashBoard.class));
+            startActivity(new Intent(MainActivity.this,Home.class));
     }
 
     @Override
