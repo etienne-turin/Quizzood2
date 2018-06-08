@@ -3,18 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res/res-auto">
 
     <item
-        android:title=""
+        android:title="Categories"
         android:id="@+id/action_category"
         android:enabled="true"
         android:icon="@drawable/ic_question_answer_black_24dp" />
 
     <item
-        android:title=""
+        android:title="Ranking"
         android:id="@+id/action_ranking"
         android:enabled="true"
         android:icon="@drawable/ic_star_black_24dp" />
     <item
-        android:title=""
+        android:title="Profil"
         android:id="@+id/action_dashboard"
         android:enabled="true"
         android:icon="@drawable/ic_account_box_black_24dp"/>
