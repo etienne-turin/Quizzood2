@@ -27,7 +27,7 @@
 
         <EditText
             android:id="@+id/login_email"
-            android:hint="Enter your email"
+            android:hint="Entrez votre email"
             android:inputType="textCapWords"
             android:maxLines="1"
             android:layout_width="match_parent"
@@ -44,7 +44,7 @@
 
         <EditText
             android:id="@+id/login_password"
-            android:hint="Enter your password"
+            android:hint="Entrez votre mot de passe"
             android:inputType="textPassword"
             android:maxLines="1"
             android:layout_width="match_parent"
@@ -88,7 +88,7 @@
             android:layout_margin="5dp"/>
         <TextView
             android:padding="5dp"
-            android:text="OR"
+            android:text="OU"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <View

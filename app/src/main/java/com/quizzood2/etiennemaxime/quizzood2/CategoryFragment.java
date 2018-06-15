@@ -1,9 +1,7 @@
 package com.quizzood2.etiennemaxime.quizzood2;
 
-import android.content.Context;
-import android.net.Uri;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.BundleCompat;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,10 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.quizzood2.etiennemaxime.quizzood2.Common.Common;
 import com.quizzood2.etiennemaxime.quizzood2.Interface.ItemClickListener;
 import com.quizzood2.etiennemaxime.quizzood2.Model.Category;
 import com.quizzood2.etiennemaxime.quizzood2.ViewHolder.CategoryViewHolder;
@@ -33,8 +31,6 @@ public class CategoryFragment extends Fragment {
 
     FirebaseDatabase database;
     DatabaseReference categories;
-
-
 
 
     public static CategoryFragment newInstance() {
@@ -69,7 +65,11 @@ public class CategoryFragment extends Fragment {
                 viewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        Toast.makeText(getActivity(),  String.format("%s|%s",adapter.getRef(position).getKey(),model.getName()),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), String.format("%s|%s", adapter.getRef(position).getKey(), model.getName()), Toast.LENGTH_SHORT).show();
+                        Intent startGame = new Intent(getActivity(),Start.class);
+                        Common.categoryId = adapter.getRef(position).getKey();
+                        startActivity(startGame);
+
                     }
                 });
 
@@ -79,9 +79,9 @@ public class CategoryFragment extends Fragment {
         listCategory.setAdapter(adapter);
     }
 
-    @android.support.annotation.Nullable
+    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @android.support.annotation.Nullable ViewGroup container, @android.support.annotation.Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         myFragment = inflater.inflate(R.layout.fragment_category, container, false);
         listCategory = (RecyclerView)myFragment.findViewById(R.id.listCategory);
         listCategory.setHasFixedSize(true);

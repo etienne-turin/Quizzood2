@@ -74,16 +74,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(!task.isSuccessful())
+                        if(task.isSuccessful())
                         {
-                            if(password.length() < 6)
-                            {
-                                Snackbar snackBar = Snackbar.make(activity_main,"Le mot de passe est trop court, 6 caractères minimum",Snackbar.LENGTH_SHORT);
-                                snackBar.show();
-                            }
-                        }
-                        else{
-                            startActivity(new Intent(MainActivity.this,Home.class));
+                            Intent homeActivity = new Intent(MainActivity.this, Home.class);
+                            startActivity(homeActivity);
+                            finish();
                         }
                     }
                 });

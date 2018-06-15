@@ -1,29 +1,70 @@
 package com.quizzood2.etiennemaxime.quizzood2;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.quizzood2.etiennemaxime.quizzood2.Common.Common;
+import com.quizzood2.etiennemaxime.quizzood2.Model.Question;
+
+import java.util.Collections;
 
 public class Start extends AppCompatActivity {
+
+    Button btnPlay;
+
+    FirebaseDatabase database;
+    DatabaseReference questions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        database = FirebaseDatabase.getInstance();
+        questions = database.getReference("Questions");
+
+        loadQuestion(Common.categoryId);
+
+        btnPlay = (Button) findViewById(R.id.btnPlay);
+        btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View v) {
+                Intent intent = new Intent(Start.this, Playing.class);
+                startActivity(intent);
+                finish();
             }
         });
+    }
+
+    private void loadQuestion (String categoryId){
+
+        if (Common.questionList.size() > 0)
+            Common.questionList.clear();
+
+        questions.orderByChild("CategoryId").equalTo(categoryId)
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        for (DataSnapshot postSnapShot : dataSnapshot.getChildren()){
+                            Question quest = postSnapShot.getValue(Question.class);
+                            Common.questionList.add(quest);
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+
+        Collections.shuffle(Common.questionList);
     }
 
 }

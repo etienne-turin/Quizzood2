@@ -10,11 +10,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
 
 public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
@@ -62,17 +62,33 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         }
     }
 
-    private void signUpUser(String email, String password) {
+    private void signUpUser(String email, final String password) {
         auth.createUserWithEmailAndPassword(email,password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>()
+                {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(password.length() < 6)
+                        {
+                            Snackbar snackBar = Snackbar.make(activity_sign_up,"Le mot de passe est trop court, 6 caractères minimum",Snackbar.LENGTH_SHORT);
+                            snackBar.show();
+                        }
                         if(!task.isSuccessful())
                         {
                             snackbar = Snackbar.make(activity_sign_up,"Erreur: "+task.getException(),Snackbar.LENGTH_SHORT);
                             snackbar.show();
                         }
                         else{
+                            /*DatabaseReference ref = new Firebase("https://quizzood2-ecbe1.firebaseio.com/");
+                            ref.onAuth(function(authData) {
+
+                                // save the user's profile into the database so we can list users,
+                                // use them in Security and Firebase Rules, and show profiles
+                                ref.child("users").child(authData.uid).set({
+                                        provider: authData.provider,
+                                        name: getName(authData)
+                                });
+                            }); */
                             snackbar = Snackbar.make(activity_sign_up,"Enregistrement réussi! ",Snackbar.LENGTH_SHORT);
                             snackbar.show();
                         }

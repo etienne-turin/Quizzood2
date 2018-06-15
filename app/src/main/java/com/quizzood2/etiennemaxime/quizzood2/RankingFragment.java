@@ -3,17 +3,18 @@ package com.quizzood2.etiennemaxime.quizzood2;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.BundleCompat;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 
+
 public class RankingFragment extends Fragment {
 
     View myFragment;
-
 
     public static RankingFragment newInstance() {
         RankingFragment rankingFragment = new RankingFragment();
@@ -27,7 +28,7 @@ public class RankingFragment extends Fragment {
 
     @android.support.annotation.Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @android.support.annotation.Nullable ViewGroup container, @android.support.annotation.Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @android.support.annotation.Nullable ViewGroup container, Bundle savedInstanceState) {
         myFragment = inflater.inflate(R.layout.fragment_ranking, container, false);
         return myFragment;
     }

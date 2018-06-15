@@ -10,6 +10,9 @@ public class Category {
         this.Name = name;
     }
 
+    public Category() {
+    }
+
     public String getImage() {
         return Image;
     }
