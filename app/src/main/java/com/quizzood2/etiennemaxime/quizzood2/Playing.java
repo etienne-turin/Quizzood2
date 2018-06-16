@@ -3,7 +3,6 @@ package com.quizzood2.etiennemaxime.quizzood2;
 import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
-import android.graphics.drawable.RippleDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,8 +12,8 @@ import com.quizzood2.etiennemaxime.quizzood2.Common.Common;
 
 public class Playing extends AppCompatActivity implements View.OnClickListener{
 
-    final static long INTERVAL = 1000;
-    final static long TIMEOUT = 7000;
+    final static long INTERVAL = 2000;
+    final static long TIMEOUT = 12000;
     int progressValue = 0;
 
     CountDownTimer mCountDown;
@@ -51,7 +50,7 @@ public class Playing extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View view){
 
         mCountDown.cancel();
-        if (index < totalQuestion) // still have Q
+        if (index < totalQuestion) // still have Question
         {
             Button clickedButton = (Button) view;
             if (clickedButton.getText().equals(Common.questionList.get(index).getCorrectAnswer()))
@@ -61,7 +60,9 @@ public class Playing extends AppCompatActivity implements View.OnClickListener{
                 showQuestion(++index);
             }
             else {
-                // if wrong answer goes to Done
+                showQuestion(++index);
+
+                /*// if wrong answer goes to Done
                 Intent intent = new Intent(this, Done.class);
                 Bundle dataSend = new Bundle();
                 dataSend.putInt("SCORE", score);
@@ -69,7 +70,7 @@ public class Playing extends AppCompatActivity implements View.OnClickListener{
                 dataSend.putInt("CORRECT", correctAnswer);
                 intent.putExtras(dataSend);
                 startActivity(intent);
-                finish();
+                finish();*/
             }
             txtScore.setText(String.format("%d", score));
         }
@@ -79,6 +80,7 @@ public class Playing extends AppCompatActivity implements View.OnClickListener{
         if (index < totalQuestion){
             thisQuestion++;
             txtQuestionNum.setText(String.format("%d / %d", thisQuestion, totalQuestion));
+            question_text.setText(Common.questionList.get(index).getQuestion());
             progressBar.setProgress(0);
             progressValue = 0;
 

@@ -3,9 +3,7 @@ package com.quizzood2.etiennemaxime.quizzood2.Model;
 public class Question {
     private String Question, Answer1, Answer2 ,Answer3 ,Answer4 ,CorrectAnswer, CategoryId;
 
-    public void setQuestion(String question) {
-        Question = question;
-    }
+    public void setQuestion(String question) {Question = question;}
 
     public void setAnswer1(String answer1) {
         Answer1 = answer1;
@@ -31,10 +29,7 @@ public class Question {
         CategoryId = categoryId;
     }
 
-    public String getQuestion() {
-
-        return Question;
-    }
+    public String getQuestion() {return Question;}
 
     public String getAnswer1() {
         return Answer1;
