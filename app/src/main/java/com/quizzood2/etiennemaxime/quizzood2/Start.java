@@ -32,6 +32,8 @@ public class Start extends AppCompatActivity {
 
         loadQuestion(Common.categoryId);
 
+        Common.questionList.size();
+
         btnPlay = (Button) findViewById(R.id.btnPlay);
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +58,7 @@ public class Start extends AppCompatActivity {
                             Question quest = postSnapShot.getValue(Question.class);
                             Common.questionList.add(quest);
                         }
-                    }
+                    } // load questions from the CategoryId
 
                     @Override
                     public void onCancelled(DatabaseError databaseError) {

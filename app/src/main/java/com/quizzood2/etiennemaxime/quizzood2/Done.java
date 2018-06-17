@@ -56,7 +56,6 @@ public class Done extends AppCompatActivity {
             txtResultScore.setText(String.format("SCORE : %d",score));
             getTxtResultQuestion.setText(String.format("Réussi : %d / %d", correctAnswer, totalQuestion));
 
-
             progressBar.setMax(totalQuestion);
             progressBar.setProgress(correctAnswer);
 

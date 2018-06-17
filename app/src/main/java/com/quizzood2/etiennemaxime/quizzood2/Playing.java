@@ -61,16 +61,6 @@ public class Playing extends AppCompatActivity implements View.OnClickListener{
             }
             else {
                 showQuestion(++index);
-
-                /*// if wrong answer goes to Done
-                Intent intent = new Intent(this, Done.class);
-                Bundle dataSend = new Bundle();
-                dataSend.putInt("SCORE", score);
-                dataSend.putInt("TOTAL", totalQuestion);
-                dataSend.putInt("CORRECT", correctAnswer);
-                intent.putExtras(dataSend);
-                startActivity(intent);
-                finish();*/
             }
             txtScore.setText(String.format("%d", score));
         }
