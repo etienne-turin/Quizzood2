@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Quizzood2</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_start">Start</string>
+    <string name="title_activity_start">Démarrer</string>
+    <string name="ranking_title">Votre Score</string>
+    <string name="dashboard_btn_change_pass">Changer votre mot de passe</string>
+    <string name="dashboard_btn_logout">Déconnexion</string>
 </resources>
