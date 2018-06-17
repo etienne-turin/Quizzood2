@@ -48,11 +48,11 @@ public class Playing extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     public void onClick(View view){
-
         mCountDown.cancel();
         if (index < totalQuestion) // still have Question
         {
             Button clickedButton = (Button) view;
+
             if (clickedButton.getText().equals(Common.questionList.get(index).getCorrectAnswer()))
             {
                 score+=10;
