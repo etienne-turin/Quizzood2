@@ -48,7 +48,6 @@ public class Home extends AppCompatActivity {
             }
         });
 
-
         setDefaultFragment();
     }
 
