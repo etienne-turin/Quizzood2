@@ -52,7 +52,6 @@ public class Playing extends AppCompatActivity implements View.OnClickListener{
         if (index < totalQuestion) // still have Question
         {
             Button clickedButton = (Button) view;
-
             if (clickedButton.getText().equals(Common.questionList.get(index).getCorrectAnswer()))
             {
                 score+=10;
