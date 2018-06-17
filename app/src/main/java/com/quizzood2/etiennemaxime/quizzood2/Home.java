@@ -34,16 +34,20 @@ public class Home extends AppCompatActivity {
                         selectedFragment = RankingFragment.newInstance();
                         break;
                     case R.id.action_dashboard:
-                        startActivity(new Intent(Home.this,DashBoard.class));
-                        finish();
-                        break;
+                    startActivity(new Intent(Home.this,DashBoard.class));
+                    // no finnish() to be able to press back and go back to Home
+                    break;
                 }
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.frame_layout,selectedFragment);
-                transaction.commit();
+
+                if (selectedFragment != null){
+                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                    transaction.replace(R.id.frame_layout,selectedFragment);
+                    transaction.commit();
+                }
                 return true;
             }
         });
+
 
         setDefaultFragment();
     }

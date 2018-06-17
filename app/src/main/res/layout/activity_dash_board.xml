@@ -37,7 +37,7 @@
 
         <EditText
             android:id="@+id/dashboard_new_password"
-            android:hint="Enter new password"
+            android:hint="Entrer un nouveau mot de passe"
             android:inputType="textPassword"
             android:maxLines="1"
             android:layout_width="match_parent"
